@@ -1,0 +1,24 @@
+Objetivos del proyecto
+** Objetivo general: **
+- Desarrollar una aplicacion web que permita al usuario visualizar las tareas pendientes y completadas, ademas de poder agregar, editar y eliminar tareas.
+- La aplicacion debe ser responsiva y amigable para el usuario.
+- La aplicacion debe ser desarrollada en React.js
+- La aplicacion debe ser desplegada en un servidor de aplicaciones web.
+- La aplicacion debe ser desarrollada en un entorno de desarrollo local.
+** Objetivos especificos: **
+- Crear un repositorio en GitHub para el proyecto.
+- Crear un archivo README.md con la descripcion del proyecto.
+- Crear un archivo .gitignore para ignorar los archivos y carpetas que no se deben subir al repositorio.
+- Crear un archivo package.json con las dependencias del proyecto.
+- Crear un archivo package-lock.json con las dependencias del proyecto.
+- Crear un archivo .env para las variables de entorno.
+- Crear un archivo .env.example para las variables de entorno.
+- Crear las rutas para leer, crear, editar y eliminar tareas, con el servidor en typescript.
+- Crear las rutas para leer, crear, editar y eliminar tareas, con el cliente en typescript.
+- Utilizar el framework de Material-UI para el diseño de la aplicacion.
+
+** Alcance del proyecto: **
+- El proyecto debe ser desarrollado en un entorno de desarrollo local.
+- El proyecto debe ser desplegado en un servidor de aplicaciones web.
+- El proyecto debe tener una interfaz amigable para el usuario.
+- El proyecto debe tener una interfaz responsiva.

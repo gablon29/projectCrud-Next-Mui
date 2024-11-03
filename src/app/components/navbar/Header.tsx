@@ -1,6 +1,9 @@
 "use client";
 import * as React from "react";
 import { BottomNavigation, Box, BottomNavigationAction } from "@mui/material";
+import AddHomeWorkIcon from "@mui/icons-material/AddHomeWork";
+import TaskIcon from "@mui/icons-material/Task";
+import AddTaskIcon from "@mui/icons-material/AddTask";
 
 const Header: React.FC = () => {
   const [value, setValue] = React.useState(0);
@@ -15,10 +18,19 @@ const Header: React.FC = () => {
           setValue(newValue);
         }}
       >
-        <BottomNavigationAction label="Recents" sx={{ color: "GrayText" }} />
-        <BottomNavigationAction label="Favorites" sx={{ color: "GrayText" }} />
         <BottomNavigationAction
-          label="crear tarea"
+          label="Home"
+          icon={<AddHomeWorkIcon />}
+          sx={{ color: "GrayText" }}
+        />
+        <BottomNavigationAction
+          label="New Tasck"
+          icon={<AddTaskIcon />}
+          sx={{ color: "GrayText" }}
+        />
+        <BottomNavigationAction
+          label="All tasks"
+          icon={<TaskIcon />}
           sx={{ color: "GrayText" }}
         />
       </BottomNavigation>

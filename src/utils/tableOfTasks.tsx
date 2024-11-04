@@ -1,6 +1,6 @@
 import { GridColDef } from "@material-ui/data-grid";
 
-const columns: GridColDef[] = [
+export const columns: GridColDef[] = [
   { field: "id", headerName: "ID", width: 70 },
   { field: "task", headerName: "Task", width: 130 },
   { field: "description", headerName: "Description", width: 130 },

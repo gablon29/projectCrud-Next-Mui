@@ -1,7 +1,7 @@
 import React from "react";
-import { Button } from "@mui/material";
 import styles from "./page.module.css";
 import Header from "./components/navbar/Header";
+import HomePage from "./components/home/HomePage";
 
 export default function Home() {
   return (
@@ -9,6 +9,9 @@ export default function Home() {
       <nav>
         <Header />
       </nav>
+      <main>
+        <HomePage />
+      </main>
     </div>
   );
 }

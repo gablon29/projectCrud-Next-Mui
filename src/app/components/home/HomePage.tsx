@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import { DataGrid } from "@material-ui/data-grid";
+import { DataGrid } from "@mui/x-data-grid";
 import { columns } from "../../../utils/tableOfTasks";
 import { Paper } from "@mui/material";
 

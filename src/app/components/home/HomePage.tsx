@@ -1,58 +1,48 @@
-"use client";
 import * as React from "react";
-import { DataGrid } from "@material-ui/data-grid";
-import { columns } from "../../../utils/tableOfTasks";
-import { Paper } from "@mui/material";
+import Table from "@mui/material/Table";
+import TableBody from "@mui/material/TableBody";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableHead from "@mui/material/TableHead";
+import TableRow from "@mui/material/TableRow";
+import Paper from "@mui/material/Paper";
+import { createData } from "../../../utils/tableOfTasks";
 
 const rows = [
-  {
-    id: 1,
-    task: "Task 1",
-    description: "Description 1",
-    status: "Status 1",
-    date: "Date 1",
-    time: "Time 1",
-  },
-  {
-    id: 2,
-    task: "Task 2",
-    description: "Description 2",
-    status: "Status 2",
-    date: "Date 2",
-    time: "Time 2",
-  },
-  {
-    id: 3,
-    task: "Task 3",
-    description: "Description 3",
-    status: "Status 3",
-    date: "Date 3",
-    time: "Time 3",
-  },
-  {
-    id: 4,
-    task: "Task 4",
-    description: "Description 4",
-    status: "Status 4",
-    date: "Date 4",
-    time: "Time 4",
-  },
-  {
-    id: 5,
-    task: "Task 5",
-    description: "Description 5",
-    status: "Status 5",
-    date: "Date 5",
-    time: "Time 5",
-  },
+  createData("Frozen yoghurt", "23-12-2024", "Pendiente"),
+  createData("Ice cream sandwich", "23-12-2024", "Pendiente"),
+  createData("Eclair", "23-12-2024", "Echo"),
+  createData("Cupcake", "23-12-2024", "Echo"),
+  createData("Gingerbread", "23-12-2024", "Pendiente"),
 ];
 
-const HomePage = () => {
+export default function BasicTable() {
   return (
-    <Paper sx={{ height: 400, width: "100%" }}>
-      <DataGrid rows={rows} columns={columns} checkboxSelection />
-    </Paper>
+    <TableContainer component={Paper}>
+      <Table
+        sx={{ minWidth: 650, justifyContent: "center" }}
+        aria-label="simple table"
+      >
+        <TableHead>
+          <TableRow>
+            <TableCell align="center">nombre</TableCell>
+            <TableCell align="center">fecha</TableCell>
+            <TableCell align="center">status</TableCell>
+          </TableRow>
+        </TableHead>
+        <TableBody>
+          {rows.map((row) => (
+            <TableRow
+              key={row.name}
+              sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
+            >
+              <TableCell align="center">{row.name}</TableCell>
+              <TableCell align="center">{row.time}</TableCell>
+              <TableCell align="center">{row.status}</TableCell>
+            </TableRow>
+          ))}
+        </TableBody>
+      </Table>
+    </TableContainer>
   );
-};
-
-export default HomePage;
+}
